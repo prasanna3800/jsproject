@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindful Journey - Meditation & Wellness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./app.css">
+    
+</head>
+<body>
+
+    <!-- navbar section -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Mindful Journey</a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#meditation">Meditation</a>
+                <a href="#courses">Courses</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- banner -->
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Begin Your Mindful Journey</h1>
+            <p>Discover peace, balance, and inner harmony through meditation</p>
+        </div>
+    </section>
+
+
+    <!-- meditation tools -->
+
+    
+    <section class="meditation-tools" id="meditation">
+        <div class="tool-card">
+            <button class="tool-button breathing-btn"></button>
+            <h3>Breathing Exercise</h3>
+            <p>Follow guided breathing patterns to achieve calmness and focus</p>
+            <button class="meditation-button" onclick="startBreathing()">Start Breathing</button>
+        </div>
+
+        <div class="tool-card">
+            <button class="tool-button relaxation-btn"></button>
+            <h3>Deep Relaxation</h3>
+            <p>Experience complete relaxation through guided meditation</p>
+            <button class="meditation-button" onclick="startRelaxation()">Start Relaxation</button>
+        </div>
+
+        <div class="tool-card">
+            <button class="tool-button binaural-btn"></button>
+            <h3>Binaural Beats</h3>
+            <p>Enhance focus and meditation with binaural audio therapy</p>
+            <button class="meditation-button" onclick="startBinaural()">Start Listening</button>
+        </div>
+    </section>
+   
+
+
+    <!-- courses section-->
+        
+
+        <section id="courses" class="section">
+            <div class="container">
+                <h2 class="section-title">Our Courses</h2>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <img src="./images/breath1.jpg" alt="Beginner's Meditation" class="course-image">
+                        <div class="course-content">
+                            <h3>Beginner's Meditation</h3>
+                            <p>Perfect for those starting their meditation journey</p>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="./images/mindfullmedi1.webp" alt="Advanced Meditation" class="course-image">
+                        <div class="course-content">
+                            <h3>Advanced Meditation</h3>
+                            <p>Deepen your practice with advanced techniques</p>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <img src="./images/soundmeditation.png" alt="Mindfulness Course" class="course-image">
+                        <div class="course-content">
+                            <h3>Mindfulness Course</h3>
+                            <p>Learn to live in the present moment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- blog section -->
+
+        <section id="blog" class="section">
+            <div class="container">
+                <h2 class="section-title">Blog</h2>
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <img src="./images/img5.jfif" alt="Blog Post 1" class="blog-image">
+                        <div class="blog-content">
+                            <h3>Benefits of Daily Meditation</h3>
+                            <p>Discover how daily meditation can transform your life...</p>
+                            <!-- <button class="read-more-btn"  onclick="benefits()">Read More</button> -->
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <img src="./images/buddhism.jpg" alt="Blog Post 2" class="blog-image">
+                        <div class="blog-content">
+                            <h3>Mindful Living Tips</h3>
+                            <p>Simple ways to incorporate mindfulness into your daily routine...</p>
+                            <!-- <button class="read-more-btn" onclick="tips()">Read More</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- contact section -->
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+
+    <script src="./app.js"></script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binaural Beats Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #7E57C2, #acb6e5);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+        .container {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            font-size: 24px;
+            color: #B39DDB;
+            margin-bottom: 20px;
+        }
+        .dropdown {
+            margin: 20px 0;
+        }
+        select {
+            padding: 12px 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #B39DDB;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        button:hover {
+            background-color: #004c99;
+        }
+        button:active {
+            transform: scale(0.98);
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                max-width: 90%;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            button {
+                font-size: 14px;
+                padding: 10px 15px;
+            }
+            select {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 18px;
+            }
+            button {
+                font-size: 12px;
+                padding: 8px 10px;
+            }
+            select {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Binaural Beats Generator</h1>
+        <div class="dropdown">
+            <label for="sound-select">Choose a sound type: </label>
+            <select id="sound-select">
+                <option value="./sounds/forestsound.mp3">Forest Sounds</option>
+                <option value="./sounds/gamma-beatsmp3.mp3">Gamma Beats</option>
+                <option value="./sounds/naturesounds.mp3">Nature Sounds</option>
+                <option value="./sounds/alpha-sounds.mp3">Alpha Sounds</option>
+                <option value="./sounds/birds-sound.mp3">Bird Sounds</option>
+            </select>
+        </div>
+        <button onclick="playSelectedSound()">Play Selected Sound</button>
+        <button onclick="stopSound()">Stop Sound</button>
+        <button onclick="navigateToMainPage()">Go to Main Page</button>
+    </div>
+    <script>
+        let currentAudio = null;
+
+        function playSelectedSound() {
+            const selectElement = document.getElementById('sound-select');
+            const selectedFile = selectElement.value;
+
+            // Stop any currently playing audio
+            stopSound();
+
+            // Create a new audio instance and play it
+            currentAudio = new Audio(selectedFile);
+            currentAudio.loop = true; // Loop the audio if desired
+            currentAudio.play();
+        }
+
+        function stopSound() {
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+                currentAudio = null;
+            }
+        }
+
+        function navigateToMainPage() {
+            window.location.href = "main.html"; // Replace with the actual path to your main page
+        }
+    </script>
+</body>
+</html>

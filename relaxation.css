@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.back-menu {
+  padding: 10px 20px; /* Add some space inside the button */
+  font-size: 16px; /* Adjust font size */
+  color: white; /* Button text color */
+  background-color: #4972a1; /* Button background color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add slightly rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+  margin-top: 2%;
+  margin-left: 85%;
+}
+
+.back-menu:hover {
+  background-color: #355f8a; /* Darker color on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.time-select,
+.sound-picker {
+  height: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+}
+.time-select button,
+.sound-picker button {
+  color: white;
+  width: 30%;
+  height: 10%;
+  background: none;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: all 0.5s ease;
+}
+
+.sound-picker button {
+  border: none;
+  height: 120px;
+  width: 120px;
+  padding: 30px;
+  border-radius: 50%;
+}
+.sound-picker button:nth-child(1) {
+  background: #4972a1;
+}
+.sound-picker button:nth-child(2) {
+  background: #a14f49;
+}
+.sound-picker button img {
+  height: 100%;
+}
+
+.time-select button:hover {
+  background: white;
+  color: black;
+}
+
+/* .player-container {
+  position: relative;
+  height: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+}
+
+.player-container svg {
+  position: absolute;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  pointer-events: none;
+} */
+
+.player-container {
+  position: relative;
+  height: 80%;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column;
+}
+
+.play {
+  position: relative;
+  height: 100px; /* Adjust the size as needed */
+  width: 100px; /* Adjust the size as needed */
+  cursor: pointer;
+  z-index: 1; /* Ensure it is above other elements */
+}
+
+.track-outline,
+.moving-outline {
+  position: absolute;
+  height: 50%; /* Adjust size if necessary */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  pointer-events: none;
+}
+
+.time-display {
+  color: white;
+  position: relative;
+  font-size: 50px;
+  margin-top: 20px;
+}
+
+.player-container svg circle {
+  transition: all 0.2s ease-in-out;
+}
+.time-display {
+  color: white;
+  position: absolute;
+  font-size: 50px;
+  bottom: 10%;
+}
+
+video {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  z-index: -10;
+}
+
+/* Default styles for larger screens (desktops) */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #121212;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.vid-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Time select buttons */
+.time-select {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.time-select button {
+  background-color: #018EBA;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Player container */
+.player-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+/* Sound picker */
+.sound-picker {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
